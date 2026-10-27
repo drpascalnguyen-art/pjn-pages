@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Free Airway & Sleep Self-Screen | PJN Dental, Beaverton OR</title>
+<meta name="description" content="A free 2-minute self-screen for snoring, sleep apnea signs and mouth breathing, for adults and kids. From Dr. Pascal Nguyen, DMD, NMD, Beaverton OR.">
+<meta property="og:title" content="Free Airway & Sleep Self-Screen | Dr. Pascal Nguyen, DMD, NMD">
+<meta property="og:description" content="A free 2-minute self-screen for snoring, sleep apnea signs and mouth breathing, for adults and kids. From Dr. Pascal Nguyen, DMD, NMD, Beaverton OR.">
+<meta property="og:image" content="https://pjndental.com/wp-content/uploads/2026/06/PJN-logo-emblem.png">
+<link rel="icon" href="https://pjndental.com/wp-content/uploads/2026/06/PJN-logo-emblem.png">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="../"><img src="https://pjndental.com/wp-content/uploads/2026/06/PJN-logo-emblem.png" alt="PJN Dental logo">PJN Dental</a>
+  <a class="call-sm" href="tel:+15036491646">📞 (503) 649-1646</a>
+</div></header>
+<div class="hero"><div class="wrap">
+  <p class="eyebrow">Free · 2 minutes · no sign-up</p>
+  <h1>Snoring isn't just noise. Take the 2-minute airway self-screen.</h1>
+  <p class="lede">Check the boxes that apply to you (or your child). This isn't a diagnosis. It helps you decide whether an airway evaluation is worth it.</p>
+  <div class="ctas">
+    <a class="btn btn-primary" href="https://pjndental.com/new-patients/?utm_source=social&utm_medium=landing&utm_campaign=airway">Request a new patient exam</a>
+    <a class="btn btn-ghost" href="tel:+15036491646">Call (503) 649-1646</a>
+  </div>
+</div></div>
+<div class="wrap">
+<h2>For adults</h2>
+<label class="q"><input type="checkbox" name="a"><span>Do you snore, or has someone told you that you snore?</span></label>
+<label class="q"><input type="checkbox" name="a"><span>Do you wake up tired even after 7 to 8 hours in bed?</span></label>
+<label class="q"><input type="checkbox" name="a"><span>Has anyone noticed you stop breathing or gasp during sleep?</span></label>
+<label class="q"><input type="checkbox" name="a"><span>Do you wake up with headaches or a dry mouth?</span></label>
+<label class="q"><input type="checkbox" name="a"><span>Do you grind or clench your teeth, or have worn-down teeth?</span></label>
+<label class="q"><input type="checkbox" name="a"><span>Do you breathe through your mouth during the day or at night?</span></label>
+<label class="q"><input type="checkbox" name="a"><span>Do you have high blood pressure?</span></label>
+<label class="q"><input type="checkbox" name="a"><span>Do you get up more than once a night to use the bathroom?</span></label>
+<label class="q"><input type="checkbox" name="a"><span>Do you feel foggy, irritable or sleepy during the day?</span></label>
+<label class="q"><input type="checkbox" name="a"><span>Do you use a CPAP but still feel tired, or struggle to use it?</span></label>
+<h2>For kids <span class="note">(optional)</span></h2>
+<label class="q"><input type="checkbox" name="k"><span>Does your child sleep with their mouth open or snore?</span></label>
+<label class="q"><input type="checkbox" name="k"><span>Is your child restless at night, or wet the bed past age 5?</span></label>
+<label class="q"><input type="checkbox" name="k"><span>Does your child have trouble focusing or seem tired during the day?</span></label>
+<label class="q"><input type="checkbox" name="k"><span>Does your child grind their teeth or have crowded teeth?</span></label>
+<p style="margin-top:22px"><button class="btn btn-dark" style="border:0;cursor:pointer" onclick="score()">See my result</button></p>
+<div id="result" class="card" aria-live="polite">
+  <p class="big" id="rtitle"></p>
+  <p id="rbody"></p>
+  <div class="ctas"><a class="btn btn-dark" href="https://pjndental.com/new-patients/?utm_source=social&utm_medium=landing&utm_campaign=airway">Request a new patient exam</a><a class="btn btn-outline" href="tel:+15036491646">Call (503) 649-1646</a></div>
+</div>
+
+<h2>Why airway matters</h2>
+<p>In obstructive sleep apnea, the airway narrows or collapses during sleep and breathing pauses. Oxygen drops, and the body wakes just enough to breathe, often many times a night without you remembering. Over time, untreated sleep apnea is linked to high blood pressure, heart disease and diabetes.</p>
+<p>Dentists often spot the early signs first: worn teeth from grinding, a scalloped tongue, a narrow palate or mouth breathing.</p>
+<h2>What we do</h2>
+<ul class="check">
+  <li>An airway screening as part of every new patient exam, including a 3D scan of the airway</li>
+  <li>Help arranging a home sleep test. Only a sleep study can diagnose sleep apnea</li>
+  <li>Oral appliance therapy for appropriate patients, coordinated with your physician</li>
+  <li>For kids: airway-focused growth guidance, myofunctional therapy and tongue-tie evaluation</li>
+</ul>
+</div>
+<script>
+function score(){
+  var a=document.querySelectorAll('input[name=a]:checked').length;
+  var k=document.querySelectorAll('input[name=k]:checked').length;
+  var t,b;
+  if(a>=5||k>=2){t="Worth getting checked soon";b="You checked "+a+" adult and "+k+" child signs. Several signs together are a good reason to have an airway evaluation and talk about a sleep test.";}
+  else if(a>=2||k>=1){t="Worth mentioning at your next visit";b="You checked "+a+" adult and "+k+" child signs. A few signs don't mean you have sleep apnea, but they're worth a closer look.";}
+  else{t="Low on this screen";b="You checked "+a+" adult and "+k+" child signs. If you still feel tired or someone notices you snore or gasp at night, get checked anyway.";}
+  document.getElementById('rtitle').textContent=t;document.getElementById('rbody').textContent=b+" This screen is not a diagnosis.";
+  var r=document.getElementById('result');r.style.display='block';r.scrollIntoView({behavior:'smooth',block:'center'});
+}
+</script>
+
+<div class="band"><div class="wrap">
+  <h2>Start with a new patient exam</h2>
+  <p>Your first visit is unhurried. We listen to your story first, then look at your teeth, gums, bite, jaw joints, airway and overall health together, so the plan fits you.</p>
+  <div class="ctas">
+    <a class="btn btn-primary" href="https://pjndental.com/new-patients/?utm_source=social&utm_medium=landing&utm_campaign=airway">Request a new patient exam</a>
+    <a class="btn btn-ghost" href="tel:+15036491646">Call (503) 649-1646</a>
+    <a class="btn btn-ghost" href="https://www.instagram.com/drpascalnguyen/">Message me on Instagram</a>
+  </div>
+</div></div>
+<footer><div class="wrap">
+  <p><strong>PJN Dental</strong> · Dr. Pascal Nguyen, DMD, NMD<br>
+  <a href="https://maps.google.com/?q=PJN+Dental+17535+SW+Tualatin+Valley+Hwy+Beaverton+OR+97003">17535 SW Tualatin Valley Hwy, Beaverton, OR 97003</a> · <a href="tel:+15036491646">(503) 649-1646</a></p>
+  <p class="note">This page is general education, not medical or dental advice, and it is not a diagnosis. Every mouth is different; your options depend on an in-person exam.</p>
+  <p class="note"><a href="https://pjndental.com/">pjndental.com</a></p>
+</div></footer>
+</body>
+</html>
