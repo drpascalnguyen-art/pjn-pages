@@ -89,6 +89,7 @@ PAGES[""] = ("Start here", "Dr. Pascal Nguyen, biological dentist in Beaverton, 
   <a class="btn btn-outline" href="safe-amalgam-removal/">Safe silver (mercury) filling removal</a>
   <a class="btn btn-outline" href="root-canal-second-opinion/">Root canal second opinion</a>
   <a class="btn btn-outline" href="airway-self-screen/">Free airway &amp; sleep self-screen</a>
+  <a class="btn btn-outline" href="exam/">What's in a new patient exam</a>
   <h2>Where we are</h2>
   <p><a href="{MAPS}">{ADDR}</a></p>
 </div>
@@ -180,6 +181,42 @@ PAGES["root-canal-second-opinion"] = ("Root Canal Second Opinion", "Get a root c
 <details><summary>Do I need my old x-rays?</summary><p>If you have them, bring or send them. They help us compare over time. We'll take our own 3D scan either way.</p></details>
 </div>
 """, "rootcanal")
+
+# ---------------------------------------------------------------- new patient exam guide (DM "EXAM")
+EXAM_ITEMS = [
+    ("We listen first", "Your health history, your symptoms, what you've already tried and your goals. You won't be rushed."),
+    ("3D (CBCT) scan", "A 3D view of your teeth, jaws, sinuses and airway. It shows infection, bone loss and anatomy that flat x-rays can miss."),
+    ("Digital x-rays and photos", "A detailed record of your teeth so we can track changes over time."),
+    ("Oral cancer screening", "A careful check of your tongue, cheeks, throat and lymph nodes."),
+    ("Gum health", "We measure your gums and check for bleeding and inflammation, which is linked to the rest of your health."),
+    ("Decay and wear", "We look for cavities, cracks and worn enamel, and what's causing them."),
+    ("Bite and jaw joints (TMJ)", "We check how your teeth meet, your jaw joints, your range of motion and tender muscles."),
+    ("Digital scan of your bite", "A 3D scan that shows wear patterns and stress on your teeth from grinding or clenching."),
+    ("Airway and posture", "We look for signs of mouth breathing, snoring and sleep-disordered breathing, and how head and neck posture relate to your airway."),
+    ("Saliva and pH", "Saliva protects your teeth. We check its flow and acidity, which affect decay and enamel erosion."),
+    ("Blood sugar (A1C)", "Blood sugar affects inflammation, gum health and healing."),
+    ("Nitric oxide", "Gives insight into circulation, which matters for healing."),
+    ("Heart rate variability (HRV)", "A look at nervous system balance and stress resilience."),
+    ("Minerals", "We talk about the minerals your teeth, gums and bone rely on."),
+    ("Meridian assessment", "A traditional tooth-organ chart we use as one extra perspective alongside the clinical exam."),
+]
+
+PAGES["exam"] = ("What's in a New Patient Exam", "What happens at a new patient exam with Dr. Pascal Nguyen, DMD, NMD in Beaverton, OR: an unhurried, whole-body look at your oral health.", hero(
+    "Your first visit", "What's actually in a new patient exam with me",
+    "Many patients tell me they've felt rushed and that nobody looked at the whole picture. My exam is different. I'm not in a hurry, and I want to hear your story first. Here's everything we look at, and why.", "exam") + """
+<div class="wrap">
+<h2>Everything we look at</h2>
+""" + "\n".join(f'<div class="card"><h3>{i}. {t}</h3><p>{d}</p></div>' for i, (t, d) in enumerate(EXAM_ITEMS, 1)) + """
+<h2>What you leave with</h2>
+<ul class="check">
+  <li>A clear explanation of what we found, in plain language</li>
+  <li>Your options, including doing nothing, with the pros and cons of each</li>
+  <li>A written plan and estimate before any treatment starts</li>
+</ul>
+<p class="note">Not every test is right for every patient. We'll tell you which ones make sense for you.</p>
+<p>— Dr. Pascal Nguyen, DMD, NMD</p>
+</div>
+""", "exam")
 
 # ---------------------------------------------------------------- airway self-screen
 QUESTIONS = [
