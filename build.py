@@ -30,7 +30,7 @@ def page(slug, title, desc, body, campaign):
 <meta name="description" content="{desc}">
 <meta property="og:title" content="{title} | Dr. Pascal Nguyen, DMD, NMD">
 <meta property="og:description" content="{desc}">
-<meta property="og:image" content="{LOGO}">
+<meta property="og:image" content="https://drpascalnguyen-art.github.io/pjn-pages/start-here.png">
 <link rel="icon" href="{LOGO}">
 <link rel="stylesheet" href="{depth}style.css">
 </head>
